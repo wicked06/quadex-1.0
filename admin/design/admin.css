@@ -1,0 +1,77 @@
+
+
+
+h1
+{
+  color:#820000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.top
+{
+    background:#630000;
+}
+
+.offcanvas
+{
+    background:#630000;
+}
+
+.nav-link
+{
+    color:#FAECD6;
+}
+.nav-link:hover
+{
+    background-color: #FAECD6;
+    color: #630000;
+    border-radius: 5px;
+    
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .editst
+  {
+    margin-top: 20px;
+    
+  }
+
+  .icon
+  {
+    margin-right: 20px;
+  
+  }
+  .insert
+  {
+    margin-bottom:20px;
+  }
+
+
+  .end
+  {
+    
+      display: flex;
+      justify-content: flex-start;
+  
+  }
+
+  

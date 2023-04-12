@@ -21,10 +21,9 @@
 <!--Datatables-->
     <link type="text/css" href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css"/>
     
-    <script type="text/javascript" src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+<!-- datatables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" /> 
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
 </head> 
 <body style="background-color: #F2DEBA;">
 <?php require '../connection.php'; 
@@ -45,13 +44,13 @@
       <!-- off canvas trigger -->
       <button class="btn btn-light"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
         <i class="fa-solid fa-bars"></i>
-      </button> 
+      </button>  
 
-     <img src="quadex.png" alt="">
+      <img src="../img/quadex.png" class="offcanvas-title" id="offcanvasExampleLabel" style="height: 40px; margin-left:20px;">
       <!-- off canvas trigger -->
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" style ="color:#F2DEBA;"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         
@@ -69,7 +68,11 @@
   
   <div class="offcanvas offcanvas-start sidebar-nav " tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">QUADEX</h5>
+      <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">QUADEX</h5> -->
+      <div class="d-flex align-items-center">
+          <img src="../img/quadex.png" class="offcanvas-title" id="offcanvasExampleLabel" style="height:64px; ">
+      </div>
+      
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body p-0">

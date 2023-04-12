@@ -51,8 +51,8 @@ require_once "connection.php";
                           <input type="password" class="form-control" name="Apass">
                       </div>
                   </div>
-                  <a href="admin/change_pass.php">Forget Password?</a>
-                  <input type="submit" class="btn" value="Login" name="login">
+                  <a href="admin/change_pass.php" class="forget">Forget Password?</a>
+                  <button type="submit" class="btn" value="Login" name="login" > Submit</button>
           </form>
       </div>
   </div>

@@ -14,19 +14,23 @@
 
 ?>
 
+    
     <div class="container">
-    <table class="table table-striped">
-<tr>
-      <th scope="col">Name</th>
-      <th scope="col">Exam_Category</th>
-      <th scope="col">Total Question</th>
-      <th scope="col">Correct Answer</th>
-      <th scope="col">Wrong Answer</th>
-      <th scope="col">Exam Date</th>
-      <th scope="col">Archive Date</th>
-      <th colspan=2></th>
-      
-</tr>
+    <div class="container" style=" background:#E8EEF1; padding:20px; border-radius:5px;">
+    <table class="table table-striped table-light" id="results">
+    <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Exam_Category</th>
+                <th scope="col">Total Question</th>
+                <th scope="col">Correct Answer</th>
+                <th scope="col">Wrong Answer</th>
+                
+                <th scope="col">Archive Date</th>
+                <th colspan=></th>
+                
+            </tr>
+    </thead>
 
   
 
@@ -43,17 +47,19 @@
 ?>
         
     
-        
-<tr>
-    <td><?php echo $row["name"];?></td>
-    <td><?php echo $row["category"];?></td>
-    <td><?php echo $row["total_question"];?></td>
-    <td><?php echo $row["correct_answer"];?></td>
-    <td><?php echo $row["wrong_answer"];?></td>
-    <!-- <td><?php echo $row["exam_time"];?></td> -->
-    <td><?php echo $row["date"];?></td>
-    <td><button class= "btn btn-success">Retrieve Questions</button></td>
-</tr>
+            
+    <tbody>
+            <tr>
+                <td><?php echo $row["name"];?></td>
+                <td><?php echo $row["category"];?></td>
+                <td><?php echo $row["total_question"];?></td>
+                <td><?php echo $row["correct_answer"];?></td>
+                <td><?php echo $row["wrong_answer"];?></td>
+                
+                <td><?php echo $row["date"];?></td>
+                <td><button class= " archive btn btn-success">Retrieve Questions</button></td>
+            </tr>
+    </tbody>
         
         
 
@@ -63,6 +69,12 @@
 ?>
 </table>
     </div>
+    
+    </div>
+
+    <script>
+        $('#results').DataTable();
+    </script>
 
 <?php
     include "include/footer.php";

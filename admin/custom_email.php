@@ -10,13 +10,23 @@
         $sql = "SELECT * FROM student";
         $count = $link->query($sql)->num_rows;
         $users = $link->query($sql);
-?>
 
-<div class="text-center">
+        $id=$_GET["id"];
+        $exam_category='';
+        $res=mysqli_query($link,"SELECT * FROM exam_category WHERE id=$id");
+        while($row=mysqli_fetch_array($res))
+        {
+            $exam_category=$row["category"];
+        }
+?>
+ 
+<div class="text-center fw-bold"> 
+<h1>Send Custom Email</h1>
+</div>
     <!-- START OF ROW TABLE--> 
         <div class="row">
-            <div class="col">
-                   <div class="form container ">
+            <div class="col" style="margin-top:2%;">
+                   <div  style=" background:#E8EEF1; padding:10px; border-radius:5px;">
                        <div class="">
                       <!--START OF TABLE-->
                       <table class="table table-bordered table-striped table-hovered table-light" id="customer_data">
@@ -34,7 +44,7 @@
                              <tbody id="allUsers">
                                  <?php
                                       $conn = new mysqli('localhost','root','','quadex');
-                                      $sql = "SELECT * FROM student";
+                                      $sql = "SELECT * FROM student WHERE category = '$exam_category'";
                                       $res = $conn->query($sql) or die($conn->error);
                                       while($row=$res->fetch_assoc())
                                      {
@@ -45,16 +55,20 @@
                                      <td class="get"><?= $row['email'] ?></td>            
                                      <td class="get"><?= $row['lrn'] ?></td>
                                                   
-                                     <td>  
-                                          <input type="checkbox" 
+                                  
+                                  <td >  
+                                      
+                                      <input type="checkbox" 
                                                  name="single_select"
                                                  id="single_select"
                                                  data-email="<?=$row["email"]?>"
                                                  data-name="<?=$row["name"]?>"
                                                  value="<?=$row["email"] ?>"
                                                  onclick="updateTextArea();"
-                                         />             
+                                         />   
+                                                
                                     </td>
+                                
                                 </tr>
                                   <?php
                                       }
@@ -76,7 +90,7 @@
                            <!--Start Form Action with POST Method-->
                            <!--Using POST Method (the sender name will not showed in url and it is hidden)-->
                             <form action="send.php?id=<?php echo $id?>" class="msg_container" method="post" enctype="multipart/form-data">
-                              <h4>Compose Email</h4>
+                              
                               <p id="multi-response"></p>
                                 <div class="row">  
                                 <!--First Input for Sender Name-->
@@ -102,8 +116,8 @@
                                </div>
                                 <!--Fifth Input for Recipient Emails-->
                                    <div class="mb-3">
-                                       <label for="recipient" class="form-label">Recipient Emails</label>
-                                       <textarea class="form-control" id="emails" name="emails" rows="3" required>
+                                       <label for="recipient" class="form-label" >Recipient Emails</label>
+                                       <textarea class="form-control" id="emails" name="emails" rows="3" required disabled >
                                        </textarea>
                                    </div> 
                                <!--Six Input for Body-->
@@ -113,7 +127,7 @@
                                          </textarea>
                                   </div>
                                 <!--Buttons-->
-                                  <div class="button-box">
+                                <div class="d-flex flex-row-reverse">
                                       <button class="btn btn-success me-2" name="send" type="submit" onclick="multi_email();" >Send Email</button>
                                       <button class="btn btn-danger" name="reset" type="reset">Reset Form</button>
                                   </div>
@@ -122,7 +136,7 @@
                  </div>
             </div>
         </div>
-    </div>
+  
 
 <script src="main.js" type="text/javascript"></script>
 

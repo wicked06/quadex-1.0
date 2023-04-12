@@ -42,7 +42,7 @@ while($row=mysqli_fetch_array($res))
     <tr>
         <th>Number</th>
         <th>Questions</th>
-        <th>1st Choice</th>
+        <th>1st Choice</th>1
         <th>2nd Choice</th>
         <th>3rd Choice</th>
         <th>4th Choice</th>

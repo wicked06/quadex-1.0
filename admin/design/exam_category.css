@@ -1,12 +1,12 @@
 nav
 {
-    background: #820000;
+    background: #760a04;
 }
-img
+/* img
 {
     margin-top: 200px;
     position: relative;
-}
+} */
 .icon
 {
     margin-right:10px;
@@ -16,7 +16,10 @@ img
 {
 margin-right: 20px;
 color: wheat;
-width: 20px;
-height: 20px;
+
 }
+
+
+
+
 

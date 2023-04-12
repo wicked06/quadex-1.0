@@ -52,12 +52,14 @@ h1
   .editst
   {
     margin-top: 20px;
+    color: #630000;
     
   }
 
   .icon
   {
     margin-right: 20px;
+    color: #630000;
   
   }
   .insert
@@ -73,5 +75,21 @@ h1
       justify-content: flex-start;
   
   }
+  .updateadd
+  {
+    width: 500px;
+  }
 
-  
+.edit-image
+{
+  margin-left: 20px;
+}
+
+
+.update-button 
+{
+  background: #630000; 
+  color:#FAECD6; 
+  border-radius:5px; 
+  margin-top:20px;
+}

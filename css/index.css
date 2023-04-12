@@ -47,7 +47,7 @@ form{
 
 .login-content h2{
     margin: 15px 0px;
-    color: #333;
+    color: #630000;
     text-transform: uppercase;
     font-size: 2.9rem;
 }
@@ -57,13 +57,13 @@ form{
     grid-template-columns: 7% 93%;
     margin:25px 0;
     padding: 5px 0px;
-    border-bottom: 2px solid #d9d9d9;
+    border-bottom: 2px solid  #FAECD6;
 }
 .login-content .input-div .one{
     margin-top: 0;
 }
 .i{
-    color: #d9d9d9;
+    color:  #630000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +83,7 @@ form{
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: #999;
+    color: #630000;
     font-size: 18px;
     transition: .3s;
 }
@@ -95,7 +95,7 @@ form{
     bottom: -2px;
     width: 0%;
     height: 2px;
-    background-color: #6B1919;
+    background-color: #630000;
     transition: .4s;
 }
 .input-div:before{
@@ -114,7 +114,7 @@ form{
 }
 
 .input-div.focus > i > i{
-    color: #9999;
+    color: #630000;
 }
 
 .input-div > div > input{
@@ -128,7 +128,7 @@ form{
     background: none;
     padding: 0.5rem 0.7rem;
     font-size: 1.2rem;
-    color: #555;
+    color: #630000;
     font-family: 'Poppins',sans-serif;
 }
 .input-div .pass{
@@ -138,35 +138,17 @@ a{
     display: block;
     text-align: right;
     text-decoration: none;
-    color: #999;
+    color: #630000;
     font-size: 0.9rem;
     transition: .3s;
 
 }
 a:hover{
-    color:#000;
-}
-.btn{
-    display: block;
-    width: 100%;
-    height: 50px;
-    border-radius: 25px;
-    outline: none;
-    border: none;
-    background-image: linear-gradient(to right, #625b62, #625b62,#625b62);
-    background-size: 1.2rem;
-    color: #fff;
-    text-transform: uppercase;
-    margin: 1rem 0;
-    cursor: pointer;
-    transition: .5s;
+    color:#630000;
 }
 
-.btn:hover{
-    
-    background-color: #6B1919;
-    color: antiquewhite;
-}
+
+
 
 @media  screen and(max-width:1050px){
     .container{
@@ -207,4 +189,20 @@ a:hover{
     color: #6B1919;
     text-transform: uppercase;
     font-size: 2.9rem;
+}
+
+button
+{
+    background:#630000; 
+    color:#FAECD6;
+    height: 35px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    
+}
+.forget
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

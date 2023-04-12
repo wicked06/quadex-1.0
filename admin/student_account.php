@@ -3,7 +3,32 @@
 include "include/header.php";
 include "connection.php";
 
+if (isset($_POST['gen'])) {
+  $result='';
+if (isset($_POST['chkone'])) {
+  PassGenerator(6);
+
+}elseif (isset($_POST['chktwo'])) {
+ PassGenerator(10);
+}elseif (isset($_POST['chkthree'])){
+  PassGenerator(12);
+}else{
+  PassGenerator(8);
+}
+
+
+}
+function PassGenerator($lenght)
+{
+  global $result;
+  $_ValidChar='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789';
+  while (0 <$lenght--) {
+      $result.=$_ValidChar[random_int(0,strlen($_ValidChar)-1)];
+  }
+}
 ?>
+
+
 <center> <h1 class="title fw-bold mb-5" style="color:#630000;">  <?php echo $exam_category ?> Student Accounts</h1></center>
 <div class="container-fluid">
 <div class="d-flex justify-content-end">
@@ -16,8 +41,22 @@ include "connection.php";
     <a href="print_accounts.php?id=<?php echo $id ?>" class="btn btn-dark">
       <i class="fa-solid fa-print"></i>
     </a>
+    
+
+    <form class=""   method="POST" >  
+    <div class="container px-4 text-center">
+  <div class="row ">
+        <div class="col-9">
+        <input class="form-control"type="text" name="result" value="<?php echo(@$result);?>" disabled placeholder="Copy Generated Code"></div>
+        
+    <div class="col">
+          <button class="form-control btn btn-outline-success" type="submit" name="gen" value="Generate" class="generate btn-warning" ><i class="fa-sharp fa-solid fa-lock"></i></button>        
+    </div>
+  </div>
+</div>
+ </form>
    
-      
+    </div> 
    
 
 
@@ -63,31 +102,27 @@ include "connection.php";
 
   
  
-    <form class=""   method="POST" >  
-    <div class="container px-4 text-center">
-  <div class="row ">
-        <div class="col-9">
-        <input class="form-control"type="text" name="result" value="<?php echo(@$result);?>" disabled placeholder="Copy Generated Code"></div>
-        
-    <div class="col">
-          <button class="form-control btn btn-outline-success" type="submit" name="gen" value="Generate" class="generate btn-warning" ><i class="fa-sharp fa-solid fa-lock"></i></button>        
-    </div>
-  </div>
-</div>
- </form>
+    
 </div>
 
 
-</div>
+
 </div>
 </div>
 <div class="container-fluid ">
   <div class="row align-items-start">
     <div class="col-4">
-     <img src="../img/accounts.svg" alt="" style="margin-top: 10%;">
+          <div class="container">
+          <img src="../img/accounts.svg" alt="" style="margin-top: 10%; margin-left: 20px;">
+          </div>
     </div>
-    <div class="col-8">
-    <table class="table table-bordered table-striped table-hovered table-light" id="student_data">
+    <div class="col-8 mt-3">
+
+
+    <div class="container">
+    <div style=" background:#E8EEF1; padding:20px; border-radius:5px;">
+         
+          <table class="table table-bordered table-striped table-hovered table-light" id="student_data">
                     <thead>
                        <tr>
                           <th scope="col">Email</th>
@@ -126,6 +161,9 @@ include "connection.php";
                        ?>
                     </tbody>
                  </table>
+          </div>
+  </div>
+  
 
 </div>
     </div>
@@ -168,29 +206,7 @@ if(isset($_POST["student"]))
 }
 
 
-if (isset($_POST['gen'])) {
-  $result='';
-if (isset($_POST['chkone'])) {
-  PassGenerator(6);
 
-}elseif (isset($_POST['chktwo'])) {
- PassGenerator(10);
-}elseif (isset($_POST['chkthree'])){
-  PassGenerator(12);
-}else{
-  PassGenerator(8);
-}
-
-
-}
-function PassGenerator($lenght)
-{
-  global $result;
-  $_ValidChar='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789';
-  while (0 <$lenght--) {
-      $result.=$_ValidChar[random_int(0,strlen($_ValidChar)-1)];
-  }
-}
 
 
 if (isset($_POST['archive'])) {
@@ -269,6 +285,3 @@ while($fetch = mysqli_fetch_array($query)){
 </script>
 
 <?php  include "include/footer.php";?>
-
-
-

@@ -22,10 +22,13 @@ include "include/header.php";
 <div class="container-fluid ">
   <div class="row ">
     <div class="col-4">
-      <img src="../img/results.svg" alt="" style="margin-top: 30%;">
+     <div class="container">
+     <img src="../img/results.svg" alt="" style="margin-top: 30%;">
+     </div>
     </div>
     <div class="col-8">
-    <div class="d-flex justify-content-end" style="margin-bottom: 20px;">
+        <div class="container">
+        <div class="d-flex justify-content-end" style="margin-bottom: 20px;">
    
    <a href="p_result.php?id=<?php echo $id ?>" class="icon btn btn-dark"><i class="fa-solid fa-print"></i></a>
 
@@ -52,7 +55,8 @@ include "include/header.php";
            <?php
        }else {
            ?>
-<table class="table table-bordered table-striped table-hovered table-light" id="results" style="margin-top:10px;">
+           <div style=" background:#E8EEF1; padding:10px; border-radius:5px;">
+           <table class="table table-bordered table-striped table-hovered table-light" id="results" style="margin-top:10px;">
                    <thead>
                       <tr>
                          <th>Name</th>
@@ -99,6 +103,9 @@ include "include/header.php";
            <?php
        }
           ?>
+        </div>
+        </div>
+
 
 
     </div>

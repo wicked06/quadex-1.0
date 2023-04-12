@@ -38,7 +38,7 @@ session_start();
             ?>
           <form action="resetPasswordCode.php" method="POST">
               <!-- <img src="../img/sac.png"> -->
-              <a href="../admin_login.php"><i class="fa-solid fa-house"></i></a>
+              <a href="../admin_login.php"><i class="fa-sharp fa-regular fa-arrow-left"></i></a>
 
               <h3>Change password</h3>
               
@@ -53,7 +53,7 @@ session_start();
                           <input type="email" name="email" class="form-control" >
                       </div>
                   </div>
-                  <input type="submit" class="btn" name="sendbtn" value="Send email">
+                  <button type="submit" class="btn" name="sendbtn" value="Send email" > Request Password</button>
           </form>
       </div>
   </div>

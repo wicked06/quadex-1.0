@@ -19,12 +19,14 @@ include "include/header.php";
 <div class="container-fluid">
   <div class="row align-items-start">
     <div class="col-4">
-      <img src="../img/Exam.svg" alt="">
+        <div class="container">
+            <img src="../img/Exam.svg" width="90%" style="margin-left:20px;">
+        </div>
     </div>
     <div class="col-8">
       <!-- Content -->
 <!-- buttons -->
-<div class="container-fluid">
+<div class="container">
     <div class="d-flex justify-content-end" style="margin-bottom: 20px;">
 
 
@@ -52,9 +54,10 @@ include "include/header.php";
 
                     
 
-          
+<div class="container">
 
-  <div class="container">
+    <div style=" background:#E8EEF1; padding:20px; border-radius:5px;">
+    
   <table class="table table-bordered table-striped table-hovered table-light" id="questions" style="margin-top:10px;">
                     <thead>
                        <tr>
@@ -102,6 +105,7 @@ include "include/header.php";
       </table>
        
   </div>
+    </div>
     </div>
    
   </div>

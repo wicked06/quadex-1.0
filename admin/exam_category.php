@@ -9,15 +9,20 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
     <title>Welcome to QuaDEX</title>
+
 <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
 <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
 <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- css link -->
+
+    <!-- css link -->
     <link rel="stylesheet" href="design/exam_category.css">
+
 <!-- sweetalert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
     <?php 
@@ -53,19 +58,24 @@ require_once('../connection.php');
     <!-- Custom styles for this template -->
     <link href="" rel="stylesheet">
   </head>
-  <nav class="navbar navbar-expand-lg ">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Qudex</a>
+
+  <body style="background:#FAECD6;" >
+
+  <nav class="navbar" >
+  
+  <img src="../img/quadex.png"  height="40" style="margin-left:40px;">
+  
+  
+  
     
-    
-    <div class="d-flex justify-content-end ">
+
+  <div class="d-flex justify-content-end ">
       <a href="logout.php" style="margin-right:20px;"><i class="logout fa-solid fa-right-from-bracket"></i></a>
    
      
     </div>
-  </div>
+  
 </nav>
-  <body style="background:#FAECD6;" >
 
 <?php
 $res=mysqli_query($link,"SELECT * FROM exam_category");
@@ -83,7 +93,7 @@ while($row=mysqli_fetch_array($res))
 <form id="category" method="POST" >
 
     <div class="d-flex justify-content-center">
-      <img class="mb-4" src="../img/sac.png" alt="" width="100" height="100">
+      <img class="sac mb-4" src="../img/sac.png" alt="" width="100" height="100" style=" margin-top: 15%">
     </div>
     
     <div class="container text-center ">

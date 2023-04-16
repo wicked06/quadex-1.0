@@ -91,7 +91,7 @@
       </li> -->
       <li class="mt-3">
         <a href="custom_email.php?id=<?php echo $id;?>" class="nav-link px-3 ">
-          <span><i class="icon fa-solid fa-envelope"></i>Send Email</span>
+          <span class="me-2"><i class="inside fa-solid fa-envelope" style="margin-right:20px;"></i>Send Email</span>
         </a>
       </li>
     
@@ -115,7 +115,7 @@
   </li>
   <li>
     <a href="result.php?id=<?php echo $id;?>" class="nav-link px-3">
-      <span class="me-2"><i class="icon fa-solid fa-square-poll-horizontal"></i>Student Results</span>
+      <span class="me-2" ><i class=" fa-solid fa-square-poll-horizontal" style="margin-right:20px;"></i>Student Results</span>
     </a>
   </li>
 

@@ -56,12 +56,7 @@ h1
     
   }
 
-  .icon
-  {
-    margin-right: 20px;
-    color: #630000;
-  
-  }
+ 
   .insert
   {
     margin-bottom:20px;
@@ -92,4 +87,10 @@ h1
   color:#FAECD6; 
   border-radius:5px; 
   margin-top:20px;
+}
+
+
+.marg
+{
+  margin-right: 20px;
 }

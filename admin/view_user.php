@@ -8,6 +8,7 @@
         $query = $link->query($sql) or die ($link->error);
 
         $row = $query->fetch_assoc();
+        $id = $row['id'];
         $name = $row['name'];
         $email = $row['email'];
         $lrn = $row['lrn'];
@@ -52,7 +53,7 @@
                     <div class="col-sm-12 mb-4">
                         <div class="form-group">
                                 <label>Password</label>
-                                <input type="text" class="form-control" name="password" value="<?= $lrn?>">
+                                <input type="text" class="form-control" name="password" value="<?= $password?>">
                         </div>
                     </div>
 

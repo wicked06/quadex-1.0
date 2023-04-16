@@ -31,7 +31,7 @@ include "include/header.php";
 
 
 
-    <button type="button" class="icon btn btn-success" data-bs-toggle="modal" data-bs-target="#add_question">
+    <button type="button" class=" btn btn-success" data-bs-toggle="modal" data-bs-target="#add_question" style="margin-right:20px;">
     <i class="fa-solid fa-file-circle-plus"></i>
 </button>
 
@@ -41,7 +41,7 @@ include "include/header.php";
 
     <!-- Button trigger modal -->
     
-    <button type="button" class="archive icon btn btn-warning" data-bs-toggle="modal" data-bs-target="#archive">
+    <button type="button" class="archive  btn btn-warning" data-bs-toggle="modal" data-bs-target="#archive"  style="margin-right:20px;">
     <i class="fa-solid fa-box-archive"></i>
     </button>
 
@@ -92,7 +92,7 @@ include "include/header.php";
                          
                           <td>
                              <div class="d-flex justify-content-center">
-                             <a href="view_questions.php?id=<?php echo $row["id"];?>&id1=<?php echo $id;?>" type="button" class="icon btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                             <a href="view_questions.php?id=<?php echo $row["id"];?>&id1=<?php echo $id;?>" type="button" class=" btn btn-warning"  style="margin-right:20px;"><i class="fa-solid fa-pen-to-square"></i></a>
                              <!-- <i class="fa-solid fa-pen-to-square"></i> -->
                              <button type="button" class="del_question btn btn-danger" id=<?=$row['id']?>><i class=" fa-solid fa-trash"></i></button>
                              </div>

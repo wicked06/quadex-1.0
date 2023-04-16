@@ -32,13 +32,13 @@ function PassGenerator($lenght)
 <center> <h1 class="title fw-bold mb-5" style="color:#630000;">  <?php echo $exam_category ?> Student Accounts</h1></center>
 <div class="container-fluid">
 <div class="d-flex justify-content-end">
-    <button type="button" class="btn btn-success icon" data-bs-toggle="modal" data-bs-target="#add">
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#add" style="margin-right:20px;">
       <i class=" fa-solid fa-user-plus"></i>
     </button>
-    <button type="button" class="icon btn btn-warning" data-bs-toggle="modal" data-bs-target="#archive">
+    <button type="button" class=" btn btn-warning " data-bs-toggle="modal" data-bs-target="#archive" >
       <i class="fa-solid fa-box-archive"></i>
     </button>
-    <a href="print_accounts.php?id=<?php echo $id ?>" class="btn btn-dark">
+    <a href="print_accounts.php?id=<?php echo $id ?>" class="btn btn-dark" style="margin-left:20px;">
       <i class="fa-solid fa-print"></i>
     </a>
     
@@ -151,7 +151,7 @@ function PassGenerator($lenght)
                          
                           <td>
                              <div class="d-flex justify-content-center">
-                             <button type="button" class="icon btn btn-warning update_user" id= "<?= $row['id'] ?>" ><i class="fa-solid fa-pen-to-square"></i></button>
+                             <button type="button" class="btn btn-warning update_user" id= "<?= $row['id'] ?>" style="margin-right:20px;"><i class="fa-solid fa-pen-to-square" ></i></button>
                               <button type="button" class="del_code btn btn-danger" id=<?=$row['id']?>><i class=" fa-solid fa-trash"></i></button>
                              </div>
                           </td>

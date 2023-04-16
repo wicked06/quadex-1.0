@@ -30,7 +30,7 @@ include "include/header.php";
         <div class="container">
         <div class="d-flex justify-content-end" style="margin-bottom: 20px;">
    
-   <a href="p_result.php?id=<?php echo $id ?>" class="icon btn btn-dark"><i class="fa-solid fa-print"></i></a>
+   <a href="p_result.php?id=<?php echo $id ?>" class=" btn btn-dark"><i class="fa-solid fa-print"></i></a>
 
    <button type="button" name="archive" class="archive btn btn-warning">
        <i class="fa-solid fa-box-archive"></i>

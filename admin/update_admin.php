@@ -30,7 +30,7 @@ while($row=$res->fetch_assoc())
     </div>
     <div class="col-3">
       
-    <div class="updateadd">
+    <div class="updateadd" style="background:#E8EEF1; padding: 50px; border-radius:10px;">
     <form method="POST" id="update">
               <div class="text-center">
               <img src="../img/sac.png">

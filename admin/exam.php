@@ -125,7 +125,7 @@ include "include/header.php";
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Adding Questions</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Updating Question Number 1</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -137,11 +137,11 @@ include "include/header.php";
 <div class="row gy-5">
 <div class="col-4">
   <div class="p-3">
-      <label class="fw-bold"> Question</label>
+      <label class="fw-bold"> Question: <input type="text" value="2x - 2y" class="form-control"></label>
       <input  class="insert form-control" type="file">
       <textarea type="text" name="question" id="" ></textarea>
      
-      <label class="fw-bold">Option 2</label>
+      <label class="fw-bold" style="margin-top:10px;">Option 2: <input type="text" value="2xy" class="form-control"></label>
         <input  class="insert form-control" type="file" >
         <textarea type="text" name="opt2" id=""></textarea>
       
@@ -153,11 +153,11 @@ include "include/header.php";
 <!-- end of row 1 -->
 <div class="col-4">
   <div class="p-3">
-  <label class="fw-bold"> Answer</label>
+  <label class="fw-bold"> Answer: <input type="text" value="2(x - y)" class="form-control"></label>
       <input   class="insert form-control" type="file" style=" ">
       <textarea type="text" name="answer" id=""></textarea>
 
-      <label class="fw-bold">Option 3</label>
+      <label class="fw-bold" style="margin-top:10px;">Option 3: <input type="text" value="2x - y" class="form-control"></label>
         <input  class="insert form-control" type="file" >
         <textarea type="text" name="opt3" id=""></textarea> 
 
@@ -170,12 +170,12 @@ include "include/header.php";
 <!-- end of row 2 -->
 <div class="col-4">
   <div class="p-3">
-  <label class="fw-bold">Option 1</label>
+  <label class="fw-bold">Option 1: <input type="text" value="2x2y" class="form-control"></label>
         <input  class="insert form-control" type="file" >
         <textarea type="text" name="opt1" id=""></textarea>
     
         
-        <label class="fw-bold">Option 4</label>
+        <label class="fw-bold" style="margin-top:10px;">Option 4: <input type="text" value="x - y" class="form-control"></label>
         <input  class="insert form-control" type="file" >
         <textarea type="text" name="opt4" id=""></textarea>
         
@@ -188,7 +188,7 @@ include "include/header.php";
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-success" name="add"> Add Questions</button>
+        <button type="submit" class="btn btn-warning" name="add">Update</button>
         </form>
       </div>
     </div>

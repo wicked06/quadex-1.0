@@ -79,7 +79,7 @@ while($row=mysqli_fetch_array($res))
  </form>
  <?php
  if (isset($_POST["update"])){
-    mysqli_query($link,"UPDATE exam SET question='$_POST[question]',opt1='$_POST[opt1]',opt2='$_POST[opt2]',opt3='$_POST[opt3]',opt4='$_POST[opt4]',answer='$_POST[answer]' WHERE id=$id");
+    mysqli_query($link,"UPDATE exam SET question='$_POST[question]',opt1='$_POST[opt1]',opt2='$_POST[opt2]',opt3='$_POST[opt3]',opt4='$_POST[opt4]',answer='$_POST[answer]' ");
 ?>
 <script type="text/javascript">
     window.location="exam.php?id=<?php echo $id1 ?>";

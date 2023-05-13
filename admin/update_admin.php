@@ -21,7 +21,7 @@ while($row=$res->fetch_assoc())
 
  
 
-  <div class="container-fluid" style="margin-top:5%;">
+  <div class="container-fluid" style="margin-top:2%;">
   <div class="row ">
     <div class="col-7">
      

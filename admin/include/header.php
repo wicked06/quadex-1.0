@@ -21,7 +21,7 @@
 <!--Datatables-->
     <link type="text/css" href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css"/>
     
-<!-- datatables -->
+
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" /> 
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
 </head> 

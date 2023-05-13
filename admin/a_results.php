@@ -42,7 +42,7 @@
 
     <?php
     
-    $res = mysqli_query($link,"SELECT * FROM a_result WHERE category = '$exam_category'");
+    $res = mysqli_query($link,"SELECT * FROM a_results WHERE category = '$exam_category'");
     while($row = mysqli_fetch_array($res)){
 ?>
         
@@ -52,9 +52,9 @@
             <tr>
                 <td><?php echo $row["name"];?></td>
                 <td><?php echo $row["category"];?></td>
-                <td><?php echo $row["total_question"];?></td>
-                <td><?php echo $row["correct_answer"];?></td>
-                <td><?php echo $row["wrong_answer"];?></td>
+                <td><?php echo $row["tota_questions"];?></td>
+                <td><?php echo $row["corrects_answer"];?></td>
+                <td><?php echo $row["wrong_asnwer"];?></td>
                 
                 <td><?php echo $row["date"];?></td>
                 <td><button class= " archive btn btn-success">Retrieve Questions</button></td>

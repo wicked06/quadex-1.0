@@ -30,7 +30,7 @@ include "include/header.php";
         <div class="container">
         <div class="d-flex justify-content-end" style="margin-bottom: 20px;">
    
-   <a href="p_result.php?id=<?php echo $id ?>" class=" btn btn-dark"><i class="fa-solid fa-print"></i></a>
+   <a href="p_result.php?id=<?php echo $id ?>" style="margin-right:20px;" class=" btn btn-dark"><i class="fa-solid fa-print"></i></a>
 
    <button type="button" name="archive" class="archive btn btn-warning">
        <i class="fa-solid fa-box-archive"></i>
@@ -40,7 +40,7 @@ include "include/header.php";
 
        <?php
        $count=0;
-       $res=mysqli_query($link,"SELECT * FROM results WHERE category = '$exam_category'");
+       $res=mysqli_query($link,"SELECT * FROM a_results WHERE category = '$exam_category'");
        // WHERE name='$_SESSION[name]' ORDER by id desc
        $count=mysqli_num_rows($res);
 
@@ -72,7 +72,7 @@ include "include/header.php";
                    <tbody>
                       <?php
                           
-                           $sql = "SELECT * FROM results WHERE category = '$exam_category' ";
+                           $sql = "SELECT * FROM a_results WHERE category = '$exam_category' ";
                            $res = $link->query($sql) or die($link->error);
                            while($row=$res->fetch_assoc())
                           {
@@ -80,9 +80,9 @@ include "include/header.php";
                       <tr>
                          <td>  <?= $row['name']?></td>
                          <td> <?= $row['category']?></td>
-                         <td> <?= $row['total_questions']?></td>
-                         <td> <?= $row['correct_answer']?></td>
-                         <td> <?= $row['wrong_answer']?></td>
+                         <td> <?= $row['tota_questions']?></td>
+                         <td> <?= $row['corrects_answer']?></td>
+                         <td> <?= $row['wrong_asnwer']?></td>
                          <td> <?= $row['date']?></td>
                          
                          

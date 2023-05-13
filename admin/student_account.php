@@ -1,67 +1,46 @@
-
 <?php
 include "include/header.php";
 include "connection.php";
 
-if (isset($_POST['gen'])) {
-  $result='';
-if (isset($_POST['chkone'])) {
-  PassGenerator(6);
-
-}elseif (isset($_POST['chktwo'])) {
- PassGenerator(10);
-}elseif (isset($_POST['chkthree'])){
-  PassGenerator(12);
-}else{
-  PassGenerator(8);
-}
-
-
-}
-function PassGenerator($lenght)
-{
-  global $result;
-  $_ValidChar='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789';
-  while (0 <$lenght--) {
-      $result.=$_ValidChar[random_int(0,strlen($_ValidChar)-1)];
-  }
-}
 ?>
-
-
-<center> <h1 class="title fw-bold mb-5" style="color:#630000;">  <?php echo $exam_category ?> Student Accounts</h1></center>
-<div class="container-fluid">
+<center> <h3 class="fw-bold">  <?php echo $exam_category ?> Accounts</h3></center>
+<div class="container">
 <div class="d-flex justify-content-end">
-    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#add" style="margin-right:20px;">
+    <button type="button" style="margin-right:20px;" class="btn btn-success icon" data-bs-toggle="modal" data-bs-target="#add">
       <i class=" fa-solid fa-user-plus"></i>
     </button>
-    <button type="button" class=" btn btn-warning " data-bs-toggle="modal" data-bs-target="#archive" >
+    <button type="button" style="margin-right:20px;" class="icon btn btn-warning" data-bs-toggle="modal" data-bs-target="#archive">
       <i class="fa-solid fa-box-archive"></i>
     </button>
-    <a href="print_accounts.php?id=<?php echo $id ?>" class="btn btn-dark" style="margin-left:20px;">
+    <a href="print_accounts.php?id=<?php echo $id ?>" class="btn btn-dark">
       <i class="fa-solid fa-print"></i>
     </a>
-    
+   
+      
+   
 
-    <form class=""   method="POST" >  
-    <div class="container px-4 text-center">
-  <div class="row ">
-        <div class="col-9">
-        <input class="form-control"type="text" name="result" value="<?php echo(@$result);?>" disabled placeholder="Copy Generated Code"></div>
+
+
+<div class="modal fade" id="archive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Warning!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form method="POST">
+        <h3>Are you sure you want to save all data to the archive!</h3>
+      </div>
+      <div class="modal-footer">
         
-    <div class="col">
-          <button class="form-control btn btn-outline-success" type="submit" name="gen" value="Generate" class="generate btn-warning" ><i class="fa-sharp fa-solid fa-lock"></i></button>        
+        <button type="submit" class="btn btn-warning" name="archive"><i class="icon fa-solid fa-box-archive"></i>Confirm </button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
- </form>
-   
-    </div> 
-   
-
-
-
-
+<!-- end -->
 
 <!-- Modal add account-->
 <div class="modal fade" id="add" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -102,27 +81,29 @@ function PassGenerator($lenght)
 
   
  
-    
-</div>
-
-
-
-</div>
-</div>
-<div class="container-fluid ">
-  <div class="row align-items-start">
-    <div class="col-4">
-          <div class="container">
-          <img src="../img/accounts.svg" alt="" style="margin-top: 10%; margin-left: 20px;">
-          </div>
+    <form class=""   method="POST" >  
+    <div class="container px-4 text-center">
+  <div class="row ">
+        <div class="col-9">
+        <input class="form-control"type="text" name="result" value="<?php echo(@$result);?>" disabled placeholder="Copy Generated Code"></div>
+        
+    <div class="col">
+          <button class="form-control btn btn-outline-success" type="submit" name="gen" value="Generate" class="generate btn-warning" ><i class="fa-sharp fa-solid fa-lock"></i></button>        
     </div>
-    <div class="col-8 mt-3">
+  </div>
+</div>
+ </form>
+</div>
 
 
-    <div class="container">
-    <div style=" background:#E8EEF1; padding:20px; border-radius:5px;">
-         
-          <table class="table table-bordered table-striped table-hovered table-light" id="student_data">
+</div>
+</div>
+</div>
+
+
+<div class="container">
+
+<table class="table table-bordered table-striped table-hovered table-light" id="student_data">
                     <thead>
                        <tr>
                           <th scope="col">Email</th>
@@ -151,7 +132,7 @@ function PassGenerator($lenght)
                          
                           <td>
                              <div class="d-flex justify-content-center">
-                             <button type="button" class="btn btn-warning update_user" id= "<?= $row['id'] ?>" style="margin-right:20px;"><i class="fa-solid fa-pen-to-square" ></i></button>
+                             <button type="button" class="icon btn btn-warning update_user" style="margin-right:20px;" id= "<?= $row['id'] ?>" ><i class="fa-solid fa-pen-to-square"></i></button>
                               <button type="button" class="del_code btn btn-danger" id=<?=$row['id']?>><i class=" fa-solid fa-trash"></i></button>
                              </div>
                           </td>
@@ -161,19 +142,8 @@ function PassGenerator($lenght)
                        ?>
                     </tbody>
                  </table>
-          </div>
-  </div>
-  
 
 </div>
-    </div>
-  
-  </div>
-</div>
-
-<div class="container">
-
-
 
 <?php
 // add student
@@ -206,7 +176,29 @@ if(isset($_POST["student"]))
 }
 
 
+if (isset($_POST['gen'])) {
+  $result='';
+if (isset($_POST['chkone'])) {
+  PassGenerator(6);
 
+}elseif (isset($_POST['chktwo'])) {
+ PassGenerator(10);
+}elseif (isset($_POST['chkthree'])){
+  PassGenerator(12);
+}else{
+  PassGenerator(8);
+}
+
+
+}
+function PassGenerator($lenght)
+{
+  global $result;
+  $_ValidChar='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789';
+  while (0 <$lenght--) {
+      $result.=$_ValidChar[random_int(0,strlen($_ValidChar)-1)];
+  }
+}
 
 
 if (isset($_POST['archive'])) {
@@ -236,8 +228,8 @@ while($fetch = mysqli_fetch_array($query)){
                 text: "The account will be Deleted!",
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonColor: '#4d0000',
-                cancelButtonColor: '#D5B895',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
             if (result.isConfirmed) {

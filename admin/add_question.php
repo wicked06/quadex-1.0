@@ -28,7 +28,7 @@ if(isset($_POST["add"])){
     while($row=mysqli_fetch_array($res))
     {
         $loop=$loop+1;
-        mysqli_query($link,"UPDATE questions SET questions_no='$loop' WHERE id=$row[id]");
+        mysqli_query($link,"UPDATE results SET questions_no='$loop' WHERE id=$row[id]");
     }
   }
   $loop=$loop+1;
